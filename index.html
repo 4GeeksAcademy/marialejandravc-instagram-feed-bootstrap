@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instagram Feed</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-1" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+          width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+          <path
+            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+        </svg> Instagram</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-success me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Create a new post
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Caption:</p>
+                <textarea class="form-control" id="message-text" placeholder="Agrega una descripción"></textarea>
+                <button type="button" class="btn btn-light mt-2 me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+                    <path
+                      d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z" />
+                    <path
+                      d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+                  </svg></button>
+                <button type="button" class="btn btn-light mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                    <path
+                      d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                  </svg></button>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <li class="nav-item dropdown btn btn-secondary">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+            </svg>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+            <li><a class="dropdown-item " href="#">Privacy and Data</a></li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </nav>
+  <nav>
+    <div class="nav nav-tabs justify-content-center mt-2" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+        role="tab" aria-controls="nav-home" aria-selected="true"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+          height="16" fill="currentColor" class="bi bi-grid-3x3" viewBox="0 0 16 16">
+          <path
+            d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5zM1.5 1a.5.5 0 0 0-.5.5V5h4V1zM5 6H1v4h4zm1 4h4V6H6zm-1 1H1v3.5a.5.5 0 0 0 .5.5H5zm1 0v4h4v-4zm5 0v4h3.5a.5.5 0 0 0 .5-.5V11zm0-1h4V6h-4zm0-5h4V1.5a.5.5 0 0 0-.5-.5H11zm-1 0V1H6v4z" />
+        </svg></button>
+      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
+        role="tab" aria-controls="nav-profile" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+          height="16" fill="currentColor" class="bi bi-square-fill" viewBox="0 0 16 16">
+          <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z" />
+        </svg></button>
+    </div>
+  </nav>
+  <div class="tab-content d-flex justify-content-center" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+      <div class="container">
+        <div class="row row-gap-3">
+          <div class="col-md-4">
+            <img src="https://picsum.photos/200/200?random=1" class="w-100">
+          </div>
+          <div class="col-md-4">
+            <img src="https://picsum.photos/200/200?random=2" class="w-100">
+          </div>
+          <div class="col-md-4">
+            <img src="https://picsum.photos/200/200?random=3" class="w-100">
+          </div>
+          <div class="col-md-4">
+            <img src="https://picsum.photos/200/200?random=4" class="w-100">
+          </div>
+          <div class="col-md-4">
+            <img src="https://picsum.photos/200/200?random=5" class="w-100">
+          </div>
+          <div class="col-md-4">
+            <img src="https://picsum.photos/200/200?random=6" class="w-100">
+          </div>
+          <div class="col-md-4">
+            <img src="https://picsum.photos/200/200?random=1" class="w-100">
+          </div>
+          <div class="col-md-4">
+            <img src="https://picsum.photos/200/200?random=7" class="w-100">
+          </div>
+          <div class="col-md-4">
+            <img src="https://picsum.photos/200/200?random=8" class="w-100">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+      <div class="container m-1 p-2">
+        <div class="row justify-content-center">
+          <div class="card px-0 py-2" style="width: 30rem;">
+            <div class="card-title px-3 d-flex justify-content-between">
+              <h5>Look at this photo!</h5>
+              <p>26/04</p>
+            </div>
+            <img src="https://picsum.photos/200/200?random=1" class="card-img-top" alt="..." width=100% height=400px>
+            <div class="card-body text-left">
+              <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg> 80 likes</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita illo consequatur hic esse sapiente exercitationem quas mollitia eligendi ducimus earum fugiat labore ex molestias, reiciendis dolore distinctio iste molestiae eum?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container m-1 p-2">
+        <div class="row justify-content-center">
+          <div class="card px-0 py-2" style="width: 30rem;">
+            <div class="card-title px-3 d-flex justify-content-between">
+              <h5>This post is so funny :P</h5>
+              <p>26/04</p>
+            </div>
+            <img src="https://picsum.photos/200/200?random=2" class="card-img-top" alt="..." width=100% height=400px>
+            <div class="card-body text-left">
+              <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg> 365 likes</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea quasi necessitatibus sunt? Aliquam mollitia minima repudiandae odit dolorum molestiae natus, accusantium deleniti nisi aspernatur, ex porro corrupti hic reiciendis dignissimos?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container m-1 p-2">
+        <div class="row justify-content-center">
+          <div class="card px-0 py-2" style="width: 30rem;">
+            <div class="card-title px-3 d-flex justify-content-between">
+              <h5>This is a random photo</h5>
+              <p>26/04</p>
+            </div>
+            <img src="https://picsum.photos/200/200?random=3" class="card-img-top" alt="..." width=100% height=400px>
+            <div class="card-body text-left">
+              <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg> 500 likes</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas minima sed praesentium et eveniet in voluptatibus earum, totam reprehenderit, velit, maiores commodi veniam temporibus molestiae? Ratione eligendi itaque accusantium est!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container m-1 p-2">
+        <div class="row justify-content-center">
+          <div class="card px-0 py-2" style="width: 30rem;">
+            <div class="card-title px-3 d-flex justify-content-between">
+              <h5>Another random photo</h5>
+              <p>26/04</p>
+            </div>
+            <img src="https://picsum.photos/200/200?random=4" class="card-img-top" alt="..." width=100% height=400px>
+            <div class="card-body text-left">
+              <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg> 150 likes</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quas minima consequuntur, dolores nihil non nisi illum, ipsa incidunt nam voluptatem exercitationem cum sunt, quo eveniet earum laboriosam minus mollitia?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container m-1 p-2">
+        <div class="row justify-content-center">
+          <div class="card px-0 py-2" style="width: 30rem;">
+            <div class="card-title px-3 d-flex justify-content-between">
+              <h5>I think you might like this</h5>
+              <p>26/04</p>
+            </div>
+            <img src="https://picsum.photos/200/200?random=5" class="card-img-top" alt="..." width=100% height=400px>
+            <div class="card-body text-left">
+              <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg> 1000 likes</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reprehenderit doloremque velit necessitatibus? Possimus adipisci repellat aliquam, veniam corporis rem optio ipsum sapiente exercitationem aliquid consectetur, fugit soluta, vitae alias.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container m-1 p-2">
+        <div class="row justify-content-center">
+          <div class="card px-0 py-2" style="width: 30rem;">
+            <div class="card-title px-3 d-flex justify-content-between">
+              <h5>Show this post to your friends!!</h5>
+              <p>26/04</p>
+            </div>
+            <img src="https://picsum.photos/200/200?random=6" class="card-img-top" alt="..." width=100% height=400px>
+            <div class="card-body text-left">
+              <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg> 1000 likes</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ullam repellat sit, iusto provident neque quos veritatis ipsam, quaerat animi assumenda, suscipit iste sed tempora reprehenderit in expedita dolores quisquam?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container m-1 p-2">
+        <div class="row justify-content-center">
+          <div class="card px-0 py-2" style="width: 30rem;">
+            <div class="card-title px-3 d-flex justify-content-between">
+              <h5>Only 2 posts left, let's go （＾ω＾）</h5>
+              <p>26/04</p>
+            </div>
+            <img src="https://picsum.photos/200/200?random=7" class="card-img-top" alt="..." width=100% height=400px>
+            <div class="card-body text-left">
+              <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg> 860 likes</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus voluptas dolorem accusantium. Quasi sequi quos eos dolorem sit libero incidunt aperiam, repellat eligendi culpa, nihil, architecto recusandae! Necessitatibus, quis?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container m-1 p-2">
+        <div class="row justify-content-center">
+          <div class="card px-0 py-2" style="width: 30rem;">
+            <div class="card-title px-3 d-flex justify-content-between">
+              <h5>I hope you liked it :D </h5>
+              <p>26/04</p>
+            </div>
+            <img src="https://picsum.photos/200/200?random=8" class="card-img-top" alt="..." width=100% height=400px>
+            <div class="card-body text-left">
+              <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg> 58 likes</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt in, ex accusantium alias esse necessitatibus ipsum officiis, maiores possimus tenetur expedita aliquid debitis recusandae molestiae eum saepe quam ratione minus!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container m-1 p-2">
+        <div class="row justify-content-center">
+          <div class="card px-0 py-2" style="width: 30rem;">
+            <div class="card-title px-3 d-flex justify-content-between">
+              <h5>See you later</h5>
+              <p>26/04</p>
+            </div>
+            <img src="https://picsum.photos/200/200?random=9" class="card-img-top" alt="..." width=100% height=400px>
+            <div class="card-body text-left">
+              <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg> 84 likes</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsa ipsum quod molestiae neque fugit impedit consectetur rem adipisci deleniti cum, optio necessitatibus delectus doloremque! Aspernatur, esse repellat? Soluta, iste!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
